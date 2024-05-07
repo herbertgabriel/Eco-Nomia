@@ -7,27 +7,33 @@ import flortestBackgraund from "../../assets/images/flortest-backgraund.png";
 
 const App = () => {
   useEffect(() => {
-    const $element = $(".each-event, .title");
+    const $elements = $(".each-event, .title");
     const $window = $(window);
+
+    function check_for_fade() {
+      if ($window.width() > 768) {
+        const window_height = $window.height();
+
+        $elements.each(function () {
+          const $element = $(this);
+          const element_height = $element.outerHeight();
+          const element_offset = $element.offset().top;
+          const space =
+            window_height -
+            (element_height + element_offset - $window.scrollTop());
+          if (space < 60) {
+            $element.addClass("non-focus");
+          } else {
+            $element.removeClass("non-focus");
+          }
+        });
+      } else {
+        $elements.removeClass("non-focus");
+      }
+    }
+
     $window.on("scroll resize", check_for_fade);
     $window.trigger("scroll");
-    function check_for_fade() {
-      const window_height = $window.height();
-
-      $element.each(function () {
-        const $element = $(this);
-        const element_height = $element.outerHeight();
-        const element_offset = $element.offset().top;
-        const space =
-          window_height -
-          (element_height + element_offset - $window.scrollTop());
-        if (space < 60) {
-          $element.addClass("non-focus");
-        } else {
-          $element.removeClass("non-focus");
-        }
-      });
-    }
 
     return () => {
       $window.off("scroll resize", check_for_fade);
