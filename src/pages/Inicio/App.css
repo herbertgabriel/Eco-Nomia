@@ -17,7 +17,7 @@
 
 .btn-conferir {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.5rem 1.5rem;
   background-color: #436850;
   color: #fbfada;
   text-decoration: none;
@@ -45,9 +45,9 @@
 
 .wrapper p {
   font-family: "PT Sans", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
@@ -89,7 +89,7 @@
 .each-event {
   background-color: #436850;
   color: #fbfada;
-  padding: 15px;
+  padding: 2rem;
   margin: 60px 20px;
 
   position: relative;
@@ -138,4 +138,47 @@
 .each-event.non-focus:before {
   opacity: 0;
   background-color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 50px 20px 150px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .each-event {
+    width: 80%;
+  }
+
+  .each-event:nth-child(even),
+  .each-event:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .each-event:before {
+    left: -16px;
+  }
+
+  .each-event:nth-child(even):before {
+    left: calc(100% + 2px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    padding: 30px 20px 100px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .each-event {
+    width: 90%;
+  }
 }

@@ -6,32 +6,36 @@ import { CiCircleInfo } from "react-icons/ci";
 
 export class Article extends React.Component {
   render() {
+    const { thumbnail, title, description, provider, verified } = this.props;
+    
     return (
       <article id="article">
-        <img src={this.props.thumbnail} alt="" />
+        <img src={thumbnail} alt="" />
         <div className="article-infos">
           <div className="title-verify">
-            <h2>{this.props.title}</h2>
-            <div className="verified">
-              <p>
-                Loja Verificada <MdOutlineVerified />
-              </p>
-            </div>
+            <h2>{title}</h2>
+            {verified && (
+              <div className="verified">
+                <p>
+                  Loja Verificada <MdOutlineVerified />
+                </p>
+              </div>
+            )}
           </div>
 
-          <p className="description">{this.props.description}</p>
+          <p className="description">{description}</p>
           <div className="storeInfoSection">
             <h3>
-              <a href={this.props.provider}>Ir para o site da LOJA</a>
+              <a href={provider}>Ir para o site da LOJA</a>
             </h3>
-            <div className="iconsContainer">
+            {/* <div className="iconsContainer">
               <a href="/">
                 <CiShare2 />
               </a>
               <a href="/">
                 <CiCircleInfo />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </article>
