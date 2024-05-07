@@ -1,0 +1,98 @@
+#article {
+  display: flex;
+  gap: 1.5rem;
+  border: 2px solid #436850;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+#article img {
+  width: 30rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+#article .article-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#article .article-infos h2 {
+  font-family: "Orelega One", serif;
+  color: #fbfada;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#article .verified p {
+  font-size: 1rem;
+  font-family: "PT Sans", serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#article .verified p svg {
+  margin-right: 5px;
+}
+#article .title-verify {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#article .article-infos .description {
+  color: white;
+  font-family: "PT Sans", serif;
+  font-size: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 5.5rem;
+}
+
+#article .article-infos .storeInfoSection h3 a {
+  color: #fbfada;
+  font-family: "PT Sans", serif;
+  font-size: 1.25rem;
+  text-decoration: underline;
+}
+
+#article .storeInfoSection {
+  display: flex;
+  justify-content: space-between;
+}
+#article .iconsContainer {
+  display: flex;
+  gap: 2rem;
+}
+#article .iconsContainer svg {
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  #article {
+    flex-direction: column;
+  }
+  #article .title-verify {
+    flex-direction: column;
+    gap: 0.5;
+    margin-bottom: 1.5rem;
+  }
+  #article .title-verify p {
+    display: inline;
+  }
+  #article img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  #article img {
+    margin-bottom: 0;
+  }
+}
