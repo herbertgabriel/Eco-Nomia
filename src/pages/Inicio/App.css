@@ -39,8 +39,8 @@
   font-family: "Orelega One", cursive;
   font-style: normal;
   font-size: 50px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .wrapper p {
@@ -139,7 +139,11 @@
   opacity: 0;
   background-color: #aaa;
 }
-
+.event-description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   .wrapper {
     padding: 50px 20px 150px;
@@ -166,6 +170,7 @@
   .each-event:nth-child(even):before {
     left: calc(100% + 2px);
   }
+
   .event-description p {
     font-size: 1rem;
   }
