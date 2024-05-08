@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Rodape from "../../components/Footer/Footer";
 import "./App.css";
 import flortestBackgraund from "../../assets/images/flortest-backgraund.png";
+import { Link } from "react-router-dom";
 
 const App = () => {
   useEffect(() => {
@@ -96,6 +97,9 @@ const App = () => {
                   a preservação do meio ambiente.
                 </p>
               </div>
+              <p className="btn-conferir-lojas">
+                <Link to="/lojas">Conferir lojas</Link>
+              </p>
             </div>
           </div>
         </section>

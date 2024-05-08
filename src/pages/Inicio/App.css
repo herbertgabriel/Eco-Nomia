@@ -27,12 +27,6 @@
   font-size: 20px;
 }
 
-.btn-conferir:hover {
-  background-color: #34553d;
-  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%),
-    inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
-}
-
 /*--- MAIN ---*/
 
 .wrapper h2 {
@@ -192,4 +186,18 @@
   .each-event {
     width: 90%;
   }
+}
+
+.btn-conferir-lojas a {
+  margin-top: 2rem;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: #375e45;
+  color: #fbfada;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
 }

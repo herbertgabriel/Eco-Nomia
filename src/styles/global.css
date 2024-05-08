@@ -17,6 +17,6 @@ a {
 }
 
 a:hover {
-  filter: brightness(2.5);
+  filter: brightness(1.5);
   transition: 0.3s;
 }
